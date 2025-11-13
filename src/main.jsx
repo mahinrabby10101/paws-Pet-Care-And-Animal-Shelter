@@ -12,6 +12,16 @@ import ForgetPassword from "./pages/Auth/ForgetPassword";
 import NotFound from "./pages/NotFound/NotFound";
 import PrivateRoute from "./routes/PrivateRoute";
 import "./index.css";
+import { Toaster } from "react-hot-toast";
+
+
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init({
+  duration: 1000,
+  once: true,
+  easing: "ease-in-out",
+});
 
 // ✅ Create router with Data API
 const router = createBrowserRouter([
@@ -34,6 +44,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <AuthProvider>
       <RouterProvider router={router} />
+      <Toaster position="top-right" reverseOrder={false} />
     </AuthProvider>
   </React.StrictMode>
 );

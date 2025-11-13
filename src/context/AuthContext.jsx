@@ -24,10 +24,7 @@ export default function AuthProvider({ children }) {
   const signIn = (email, password) => signInWithEmailAndPassword(auth, email, password);
   const logOut = () => signOut(auth);
   const googleLogin = () => signInWithPopup(auth, provider);
-
-  const updateUserProfile = (name, photo) =>
-    updateProfile(auth.currentUser, { displayName: name, photoURL: photo });
-
+  const updateUserProfile = (name, photo) => updateProfile(auth.currentUser, { displayName: name, photoURL: photo });
   const resetPassword = (email) => sendPasswordResetEmail(auth, email);
 
   useEffect(() => {
@@ -38,16 +35,7 @@ export default function AuthProvider({ children }) {
     return () => unsubscribe();
   }, []);
 
-  const authInfo = {
-    user,
-    loading,
-    createUser,
-    signIn,
-    logOut,
-    googleLogin,
-    updateUserProfile,
-    resetPassword,
-  };
+  const authInfo = { user, loading, createUser, signIn, logOut, googleLogin, updateUserProfile, resetPassword };
 
   return <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>;
 }
