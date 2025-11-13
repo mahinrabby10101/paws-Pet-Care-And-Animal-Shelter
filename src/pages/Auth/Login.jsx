@@ -1,24 +1,72 @@
-import { useContext } from "react";
+import { useState, useContext } from "react";
+import { useNavigate, useLocation, Link } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
-import { Link } from "react-router-dom";
+import { toast } from "react-hot-toast";
 
 export default function Login() {
   const { signIn, googleLogin } = useContext(AuthContext);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    try {
+      await signIn(email, password);
+      toast.success("Login successful!");
+      navigate(from, { replace: true });
+    } catch (err) {
+      toast.error(err.message);
+    }
+  };
+
+  const handleGoogleLogin = async () => {
+    try {
+      await googleLogin();
+      toast.success("Logged in with Google!");
+      navigate(from, { replace: true });
+    } catch (err) {
+      toast.error(err.message);
+    }
+  };
 
   return (
-    <div className="p-10 max-w-md mx-auto">
-      <h1 className="text-2xl font-bold mb-4">Login</h1>
-      <form className="space-y-4">
-        <input type="email" placeholder="Email" className="input input-bordered w-full" />
-        <input type="password" placeholder="Password" className="input input-bordered w-full" />
-        <button className="btn btn-primary w-full">Login</button>
+    <div className="max-w-md mx-auto p-6 mt-10 border rounded shadow">
+      <h2 className="text-2xl font-bold mb-4">Login</h2>
+      <form onSubmit={handleLogin} className="space-y-4">
+        <input
+          type="email"
+          placeholder="Email"
+          className="input input-bordered w-full"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          className="input input-bordered w-full"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+        />
+        <button type="submit" className="btn btn-primary w-full">Login</button>
       </form>
-      <button onClick={googleLogin} className="btn btn-outline w-full mt-4">Login with Google</button>
-      <p className="mt-2 text-sm">
-        Forgot password? <Link to="/forget-password" className="link">Click here</Link>
+
+      <button
+        onClick={handleGoogleLogin}
+        className="btn btn-outline w-full mt-4"
+      >
+        Continue with Google
+      </button>
+
+      <p className="mt-4 text-sm">
+        Forgot password? <Link to="/forget-password" className="text-blue-500">Reset</Link>
       </p>
       <p className="mt-2 text-sm">
-        Don't have an account? <Link to="/register" className="link">Register</Link>
+        Don't have an account? <Link to="/register" className="text-blue-500">Sign Up</Link>
       </p>
     </div>
   );

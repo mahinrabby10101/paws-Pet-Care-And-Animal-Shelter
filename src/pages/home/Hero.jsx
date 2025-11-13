@@ -4,9 +4,9 @@ import "swiper/css";
 
 export default function Hero() {
   const slides = [
-    "https://i.postimg.cc/3R1gX0x0/hero1.jpg",
-    "https://i.postimg.cc/2yVbXwYp/hero2.jpg",
-    "https://i.postimg.cc/y6JwY0bD/hero3.jpg",
+    "https://media.istockphoto.com/id/2180753870/photo/one-red-cat-sleeps-on-a-womans-lap-relax.jpg?s=1024x1024&w=is&k=20&c=iZUacCS5KztSa2dXG4PZ851C3DZ3D8vDllteHbyT7XE=",
+    "https://media.istockphoto.com/id/2245851041/photo/playful-cat-expressing-surprise-with-open-mouth-and-playful-energy-in-a-cozy-setting.jpg?s=1024x1024&w=is&k=20&c=Yf6zGXmYW45fvmU21bAKDS3CYEfRSeZUmofb76GCOoI=",
+    "https://plus.unsplash.com/premium_photo-1661676172038-377ab3d82a18?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   ];
 
   return (
