@@ -8,9 +8,15 @@ export default function Navbar() {
   return (
     <nav className="bg-white shadow-md py-4 px-6 flex justify-between items-center">
       {/* Logo */}
-      <Link to="/" className="text-2xl font-bold text-blue-600">
-      WarmPaws 🐾
-      </Link>
+      <Link to="/" className="flex items-center space-x-2 text-2xl font-bold text-blue-600">
+  <img 
+    src="/paw.png"      // 🔹 put your logo in "public" folder
+    alt="WarmPaws Logo"
+    className="w-8 h-8 object-contain"
+  />
+  <span>WarmPaws 🐾</span>
+</Link>
+
 
       {/* Navigation Links */}
       <div className="flex items-center space-x-4">

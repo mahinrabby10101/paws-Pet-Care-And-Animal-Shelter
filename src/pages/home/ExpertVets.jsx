@@ -1,7 +1,7 @@
 const experts = [
-    { name: "Dr. Emily White", photo: "https://i.postimg.cc/3x7t3z7F/vet1.jpg", specialty: "Small Pets" },
-    { name: "Dr. John Smith", photo: "https://i.postimg.cc/QC3n2H4q/vet2.jpg", specialty: "Dogs & Cats" },
-    { name: "Dr. Lisa Brown", photo: "https://i.postimg.cc/2yG6HhkK/vet3.jpg", specialty: "Nutrition" },
+    { name: "Dr. Muhammad Raihan", photo: "https://i.postimg.cc/3x7t3z7F/vet1.jpg", specialty: "Small Pets" },
+    { name: "Imtiyaz Fayaj", photo: "https://i.postimg.cc/QC3n2H4q/vet2.jpg", specialty: "Dogs & Cats" },
+    { name: "Dr.Lily Mily", photo: "https://i.postimg.cc/2yG6HhkK/vet3.jpg", specialty: "Nutrition" },
 ];
 
 export default function ExpertVets() {
