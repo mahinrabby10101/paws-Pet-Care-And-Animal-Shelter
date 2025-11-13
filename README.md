@@ -1,16 +1,41 @@
-# React + Vite
+# 🐾 WarmPaws – Winter Pet Care Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🌐 Live URL
+🔗 [https://warmpaws.netlify.app](https://warmpaws.netlify.app) *(replace with your actual deployed link)*
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🎯 Project Purpose
+WarmPaws is a **React + Firebase** web application that helps pet owners find and book **winter care services** for their pets — including grooming, nutrition, and cozy clothing.
+It includes **user authentication**, **protected routes**, and a **modern UI** built with Tailwind CSS.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Key Features
+- 🧼 **Winter Pet Services** — List of grooming, nutrition, and walking services.
+- 🔒 **Protected Routes** — Only logged-in users can access profile & service details.
+- 👤 **Firebase Authentication** — Email/password + Google login.
+- 📱 **Responsive Design** — Works smoothly on all devices.
+- 🖼️ **Hero Image Slider** — Built using Swiper.js.
+- 🎉 **Toast Notifications** — For login/register actions.
+- 🧩 **Dynamic Data Fetching** — Services are loaded from `pets-data.json`.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🧰 NPM Packages Used
+
+| Package | Purpose |
+|----------|----------|
+| **react-router-dom** | Routing and navigation |
+| **firebase** | Authentication & Firebase setup |
+| **react-hot-toast** | Notification system |
+| **swiper** | Image slider for hero section |
+| **aos** | Scroll animations |
+| **tailwindcss** | Styling framework |
+| **vite** | Development & build tool |
+
+---
+
+## 👨‍💻 Developer
+**Mahin Alam Rabby**  
+📧 mahinalamrabby034@gmail.com
