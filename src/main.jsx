@@ -13,6 +13,8 @@ import NotFound from "./pages/NotFound/NotFound";
 import PrivateRoute from "./routes/PrivateRoute";
 import "./index.css";
 import { Toaster } from "react-hot-toast";
+import Services from "./components/Services";
+
 
 
 import AOS from "aos";
@@ -36,6 +38,11 @@ const router = createBrowserRouter([
       { path: "register", element: <Register /> },
       { path: "forget-password", element: <ForgetPassword /> },
       { path: "*", element: <NotFound /> }, // 404
+      {
+        path: "/services",
+        element: <Services />,
+      }
+      
     ],
   },
 ]);

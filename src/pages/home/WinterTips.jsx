@@ -8,7 +8,7 @@ export default function WinterTips() {
   
     return (
       <div className="mt-10">
-        <h2 className="text-2xl font-bold mb-4">Winter Care Tips for Pets</h2>
+        <h2 className="text-2xl font-bold mb-4 text-blue-600">Winter Care Tips for Pets</h2>
         {/* 👇 This is the line to replace (originally line 12) */}
         <ul className="list-disc list-inside space-y-2" data-aos="fade-right"> 
           {tips.map((tip, i) => (

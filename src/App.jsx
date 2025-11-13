@@ -9,6 +9,7 @@ import ForgetPassword from "./pages/Auth/ForgetPassword";
 import NotFound from "./pages/NotFound/NotFound";
 import PrivateRoute from "./routes/PrivateRoute";
 
+
 export default function App() {
   return (
     <Routes>

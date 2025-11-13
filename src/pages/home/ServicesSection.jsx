@@ -13,7 +13,7 @@ export default function ServicesSection() {
 
   return (
     <section className="p-10">
-      <h2 className="text-2xl font-bold mb-6">Popular Winter Care Services</h2>
+      <h2 className="text-2xl font-bold mb-6 text-blue-600">Popular Winter Care Services</h2>
       {services.length === 0 ? (
         <p>Loading services...</p>
       ) : (
