@@ -25,19 +25,19 @@ AOS.init({
   easing: "ease-in-out",
 });
 
-// ✅ Create router with Data API
+
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <MainLayout />, // persistent Navbar/Footer
+    element: <MainLayout />,
     children: [
-      { index: true, element: <Home /> }, // default route
+      { index: true, element: <Home /> }, 
       { path: "service/:id", element: <PrivateRoute><ServiceDetails /></PrivateRoute> },
       { path: "profile", element: <PrivateRoute><MyProfile /></PrivateRoute> },
       { path: "login", element: <Login /> },
       { path: "register", element: <Register /> },
       { path: "forget-password", element: <ForgetPassword /> },
-      { path: "*", element: <NotFound /> }, // 404
+      { path: "*", element: <NotFound /> }, 
       {
         path: "/services",
         element: <Services />,

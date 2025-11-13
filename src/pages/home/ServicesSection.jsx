@@ -17,14 +17,9 @@ export default function ServicesSection() {
       {services.length === 0 ? (
         <p>Loading services...</p>
       ) : (
-        // 👇 This entire block is replaced
-        // <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        //   {services.map((service) => (
-        //     <ServiceCard key={service.serviceId} service={service} />
-        //   ))}
-        // </div>
+       
 
-        // The new code goes here:
+        
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {services.map((service) => (
             <div key={service.serviceId} data-aos="fade-up">

@@ -7,7 +7,7 @@ export default function Navbar() {
 
   return (
     <nav className="bg-white shadow-md py-4 px-6 flex justify-between items-center sticky top-0 z-50">
-      {/* Logo */}
+     
       <Link to="/" className="flex items-center space-x-2 text-2xl font-bold text-blue-600">
         <img 
           src="/paw.png"
@@ -17,7 +17,7 @@ export default function Navbar() {
         <span>WarmPaws 🐾</span>
       </Link>
 
-      {/* Navigation Links */}
+     
       <div className="flex items-center space-x-4">
         <NavLink to="/" className={({ isActive }) => isActive ? "text-blue-600 font-semibold" : "text-gray-700"}>
           Home
@@ -35,7 +35,7 @@ export default function Navbar() {
           My Profile
         </NavLink>
 
-        {/* Auth Buttons */}
+       
         {user ? (
           <div className="flex items-center space-x-2">
             {user.photoURL && (

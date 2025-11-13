@@ -31,17 +31,17 @@ export default function Hero() {
       >
         {slides.map((slide, i) => (
           <SwiperSlide key={i} className="relative">
-            {/* Image */}
+           
             <img
               src={slide.img}
               alt={`Slide ${i}`}
               className="w-full h-[300px] md:h-[400px] lg:h-[500px] object-cover rounded-lg"
             />
 
-            {/* Overlay */}
+           
             <div className="absolute inset-0 bg-black/30 z-10 rounded-lg"></div>
 
-            {/* Text */}
+           
             <div className="absolute inset-0 flex flex-col items-center justify-center z-20 px-4 text-center">
               <h2 className="text-white text-2xl md:text-5xl font-bold drop-shadow-lg">
                 {slide.title}

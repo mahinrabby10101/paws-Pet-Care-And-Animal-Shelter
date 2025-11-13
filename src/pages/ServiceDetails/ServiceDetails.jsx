@@ -8,7 +8,7 @@ export default function ServiceDetails() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
 
-  // Fetch service by ID
+  // Fetch service
   useEffect(() => {
     fetch("/pets-data.json")
       .then((res) => res.json())

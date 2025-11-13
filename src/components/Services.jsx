@@ -5,7 +5,7 @@ export default function Services() {
   const [services, setServices] = useState([]);
 
   useEffect(() => {
-    fetch("/pets-data.json") // make sure this file is inside your "public" folder
+    fetch("/pets-data.json") 
       .then((res) => res.json())
       .then((data) => setServices(data))
       .catch((err) => console.error("Error loading services:", err));

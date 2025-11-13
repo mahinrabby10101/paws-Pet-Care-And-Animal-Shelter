@@ -1,6 +1,5 @@
 import Hero from "./Hero";
-import ServicesSection from "./ServicesSection"; // your JSON card section
-import WinterTips from "./WinterTips";
+import ServicesSection from "./ServicesSection";
 import ExpertVets from "./ExpertVets";
 import ExtraSection from "./ExtraSection";
 
