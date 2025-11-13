@@ -27,7 +27,13 @@ export default function Navbar() {
         {/* Auth Buttons */}
         {user ? (
           <div className="flex items-center space-x-2">
-            {user.photoURL && <img src={user.photoURL} alt={user.displayName} className="w-8 h-8 rounded-full" />}
+            {user.photoURL && <img
+  src={user.photoURL || "https://cdn-icons-png.flaticon.com/512/149/149071.png"}
+  alt={user.displayName || "User"}
+  className="w-8 h-8 rounded-full object-cover border border-gray-300"
+  referrerPolicy="no-referrer"
+/>
+}
             <span className="hidden md:inline">{user.displayName || "User"}</span>
             <button
               onClick={logOut}
