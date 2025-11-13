@@ -2,6 +2,7 @@ import Hero from "./Hero";
 import ServicesSection from "./ServicesSection";
 import ExpertVets from "./ExpertVets";
 import ExtraSection from "./ExtraSection";
+import WinterTips from "./WinterTips";
 
 export default function Home() {
   return (
