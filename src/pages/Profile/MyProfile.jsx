@@ -10,7 +10,6 @@ export default function MyProfile() {
   const [photoURL, setPhotoURL] = useState(user?.photoURL || "");
   const defaultAvatar = "https://cdn-icons-png.flaticon.com/512/149/149071.png";
 
-  // 🔹 Handle Update
   const handleUpdate = async (e) => {
     e.preventDefault();
 
@@ -23,7 +22,6 @@ export default function MyProfile() {
       await updateProfile(user, { displayName, photoURL });
       toast.success("Profile updated successfully!");
       setIsEditing(false);
-      // optional: refresh page or trigger re-render
       window.location.reload();
     } catch (error) {
       toast.error(error.message);
@@ -64,7 +62,6 @@ export default function MyProfile() {
           </button>
         </>
       ) : (
-        // 🔹 Update Form
         <form onSubmit={handleUpdate} className="space-y-4">
           <input
             type="text"

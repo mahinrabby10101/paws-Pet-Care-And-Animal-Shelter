@@ -2,6 +2,8 @@ import { useState, useContext } from "react";
 import { useNavigate, useLocation, Link } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 import { toast } from "react-hot-toast";
+import { FcGoogle } from "react-icons/fc";
+
 
 export default function Login() {
   const { signIn, googleLogin } = useContext(AuthContext);
@@ -56,15 +58,25 @@ export default function Login() {
       </form>
 
       <button
-        onClick={handleGoogleLogin}
-        className="btn btn-outline w-full mt-4"
-      >
-        Continue with Google
-      </button>
+  onClick={handleGoogleLogin}
+  className="btn btn-outline w-full flex items-center gap-2 mt-4"
+>
+  <FcGoogle className="text-xl" />
+  Continue with Google
+</button>
+
 
       <p className="mt-4 text-sm">
-        Forgot password? <Link to="/forget-password" className="text-blue-500">Reset</Link>
-      </p>
+  Forgot password? 
+  <Link 
+    to="/forget-password" 
+    state={{ email }}  
+    className="text-blue-500"
+  >
+    Reset
+  </Link>
+</p>
+
       <p className="mt-2 text-sm">
         Don't have an account? <Link to="/register" className="text-blue-500">Sign Up</Link>
       </p>

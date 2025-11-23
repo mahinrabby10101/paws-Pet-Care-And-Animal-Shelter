@@ -8,7 +8,6 @@ export default function ServiceDetails() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
 
-  // Fetch service
   useEffect(() => {
     fetch("/pets-data.json")
       .then((res) => res.json())
@@ -21,7 +20,6 @@ export default function ServiceDetails() {
 
   if (!service) return <p className="p-10 text-center">Loading service...</p>;
 
-  // Handle booking form submit
   const handleBooking = (e) => {
     e.preventDefault();
     toast.success(`Service booked successfully for ${name}!`);

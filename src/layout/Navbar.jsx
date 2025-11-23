@@ -14,7 +14,7 @@ export default function Navbar() {
           alt="WarmPaws Logo"
           className="w-8 h-8 object-contain"
         />
-        <span>WarmPaws 🐾</span>
+        <span>PetPaws 🐾</span>
       </Link>
 
      

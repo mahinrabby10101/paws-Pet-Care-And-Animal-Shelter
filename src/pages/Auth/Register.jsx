@@ -2,6 +2,7 @@ import { useState, useContext } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 import { toast } from "react-hot-toast";
+import { FcGoogle } from "react-icons/fc";
 
 export default function Register() {
   const { createUser, updateUserProfile, googleLogin } = useContext(AuthContext);
@@ -14,17 +15,20 @@ export default function Register() {
   const handleRegister = async (e) => {
     e.preventDefault();
 
-    // Password validation
     if (!/[A-Z]/.test(password)) return toast.error("Password must have an uppercase letter");
     if (!/[a-z]/.test(password)) return toast.error("Password must have a lowercase letter");
     if (password.length < 6) return toast.error("Password must be at least 6 characters");
 
     try {
       const userCredential = await createUser(email, password);
+      console.log("UserCredential:", userCredential);
+
       await updateUserProfile(name, photo);
+
       toast.success("Account created successfully!");
       navigate("/");
     } catch (err) {
+      console.error("Registration Error:", err);
       toast.error(err.message);
     }
   };
@@ -35,6 +39,7 @@ export default function Register() {
       toast.success("Logged in with Google!");
       navigate("/");
     } catch (err) {
+      console.error("Google Login Error:", err);
       toast.error(err.message);
     }
   };
@@ -42,6 +47,7 @@ export default function Register() {
   return (
     <div className="max-w-md mx-auto p-6 mt-10 border rounded shadow">
       <h2 className="text-2xl font-bold mb-4">Register</h2>
+
       <form onSubmit={handleRegister} className="space-y-4">
         <input
           type="text"
@@ -74,13 +80,17 @@ export default function Register() {
           onChange={(e) => setPassword(e.target.value)}
           required
         />
-        <button type="submit" className="btn btn-primary w-full">Register</button>
+
+        <button type="submit" className="btn btn-primary w-full">
+          Register
+        </button>
       </form>
 
       <button
         onClick={handleGoogleLogin}
-        className="btn btn-outline w-full mt-4"
+        className="btn btn-outline w-full flex items-center gap-2 mt-4"
       >
+        <FcGoogle className="text-xl" />
         Continue with Google
       </button>
 
