@@ -1,7 +1,7 @@
 # 🐾 WarmPaws – Winter Pet Care Web App
 
 ## 🌐 Live URL
-🔗 [tourmaline-cassata-b3b288.netlify.app]
+🔗 [https://tourmaline-cassata-b3b288.netlify.app/]
 
 ---
 
